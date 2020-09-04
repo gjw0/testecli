@@ -20,6 +20,7 @@
   	<jedis-v>3.1.0</jedis-v>
   </properties>
   
+  <!--  hhhhhh 哈哈哈哈 -->
   <dependencyManagement>
   	<dependencies>
   		<dependency>
