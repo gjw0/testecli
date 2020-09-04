@@ -1,0 +1,120 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>giteclipse</groupId>
+  <artifactId>ch0</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+   <properties>
+   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   	
+  	<boot-version>2.2.5.RELEASE</boot-version>
+  	<tomcat-embed-jasp>9.0.31</tomcat-embed-jasp>
+  	<mybatis-spring-boot>2.1.2</mybatis-spring-boot>
+  	<jstl-v>1.2</jstl-v>
+  	<mysql-v>8.0.19</mysql-v>
+  	<fastjson-v>1.2.60</fastjson-v>
+  	<c3p0-v>0.9.5.2</c3p0-v>
+  	<mybatis-gen-v>1.3.7</mybatis-gen-v>
+  	<mybatis-v>3.5.2</mybatis-v>
+  	<jedis-v>3.1.0</jedis-v>
+  </properties>
+  
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<version>${boot-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${boot-version}</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<version>${boot-version}</version>
+			<optional>true</optional>
+		</dependency>
+	<!-- jstl jsp -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl-v}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<version>${tomcat-embed-jasp}</version>
+			<scope>provided</scope>
+		</dependency>
+	
+	<!-- mybatis jdbc -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<version>${boot-version}</version>
+		</dependency>
+		<dependency>
+	    	<groupId>org.mybatis</groupId>
+	    	<artifactId>mybatis</artifactId>
+	    	<version>${mybatis-v}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>${mybatis-spring-boot}</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-v}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+    		<groupId>com.mchange</groupId>
+    		<artifactId>c3p0</artifactId>
+    		<version>${c3p0-v}</version>
+    	</dependency> 
+    	<dependency>
+	    	<groupId>org.mybatis.generator</groupId>
+	    	<artifactId>mybatis-generator-core</artifactId>
+	    	<version>${mybatis-gen-v}</version>
+		</dependency>
+		
+	<!-- json -->
+		<dependency>
+    		<groupId>com.alibaba</groupId>
+    		<artifactId>fastjson</artifactId>
+    		<version>${fastjson-v}</version>
+		</dependency>
+	<!-- redis -->
+	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>io.lettuce</groupId>
+					<artifactId>lettuce-core</artifactId>
+				</exclusion>
+			</exclusions>
+			<version>${boot-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>${jedis-v}</version>
+		</dependency>
+	
+	
+  	</dependencies>
+  </dependencyManagement>
+  
+  
+  
+  
+</project>
