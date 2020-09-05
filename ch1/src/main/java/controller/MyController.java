@@ -19,5 +19,13 @@ public class MyController {
 		
 	}
 	
+	@RequestMapping("/my2")
+	public String my2() {
+		
+		return "my2";
+	}
+	
+	
+	
 	
 }
