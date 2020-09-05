@@ -12,7 +12,7 @@ public class MyController {
 	@RequestMapping("/my")
 	public String my(Model m) {
 		
-		m.addAttribute("msg", "鍝堝搱");
+		m.addAttribute("msg", "哈哈");
 		
 		return "my";
 		
