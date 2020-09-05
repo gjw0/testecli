@@ -21,7 +21,7 @@ public class MyController {
 	
 	@RequestMapping("/my2")
 	public String my2() {
-		
+		System.out.println("你好");
 		return "my2";
 	}
 	
