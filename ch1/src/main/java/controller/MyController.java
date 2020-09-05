@@ -24,5 +24,13 @@ public class MyController {
 		System.out.println("hh");
 		return "tt";
 	}
+	@RequestMapping("/my2")
+	public String my2() {
+		
+		return "my2";
+	}
+	
+	
+	
 	
 }
