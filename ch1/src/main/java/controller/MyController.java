@@ -19,4 +19,10 @@ public class MyController {
 		
 	}
 	
+	@RequestMapping("/tt")
+	public String tt() {
+		System.out.println("hh");
+		return "tt";
+	}
+	
 }
