@@ -19,6 +19,11 @@ public class MyController {
 		
 	}
 	
+	@RequestMapping("/tt")
+	public String tt() {
+		System.out.println("hh");
+		return "tt";
+	}
 	@RequestMapping("/my2")
 	public String my2() {
 		System.out.println("你好");
